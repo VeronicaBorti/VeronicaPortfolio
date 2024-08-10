@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Veronica's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function(){
+      emailjs.init({
+        publicKey: "kXEbf6Yt6cxi8Ge1j",
+      });
+      })();
+    </script>
+  </head>
+    <body> 
+    <header>
+    <ul class="nav nav-underline justify-content-center" style="background-color: white">
+    <li class="nav-item">
+    <a class="nav-link" href="index.html">Home</a>
+    </li>
+   <li class="nav-item">
+    <a class="nav-link" href="projects.html">Projects</a>
+   </li>
+   <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="contact.html">Contact</a>
+   </li>
+ </ul>
+    </header>
+    <br>
+    <body>
+        <div class="container my-5 text-center" style="max-width: 580px; margin-top: 300px;">
+        <h2> Contact Me!</h2>
+        </div>
+        <div class="container my-5 text-center" style="max-width: 580px;">
+    <form>
+      <div class="mb-3">
+        <label for="InputName">Name <em>*</em></label>
+        <input type="name" name="name" required="" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label for="InputSurname">Surname<em>*</em></label>
+        <input type="surname" required="" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label for="InputEmail">Email address<em>*</em></label>
+        <input type="email" required="" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label for="InputObject">Object</label>
+        <input type="text" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label for="InputMessage">Message<em>*</em></label>
+        <textarea class="form-control" required="" rows="5"></textarea>
+      </div>
+       <div class="mb-3">
+        <label for="InputMessage"><em>*Required field</em></label>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+        </div>   
+        <script>
+          function sendMail(){
+              (function(){
+                emailjs.init("kXEbf6Yt6cxi8Ge1j");
+               })();
+          var params= {
+            sendername: document.querySelector("#sendername").value,
+            to: document.querySelector("#to").value,
+            subject: document.querySelector("#subject").value,
+            replyto: document.querySelector("#replyto").value,
+            message: document.querySelector("#message").value,
+           };
+             var serviceID= "service_1rcglee";
+             var templateID= "template_duoy44e";
+         
+              emailjs.send(serviceID, templateID, params)
+               .then( res=> {
+              alert("Email Sent Successfully!");
+              })
+              .catch();
+         }
+         </script>
+         </form>
+             </div>
+             <hr>
+              <footer>
+                 <div class="social">
+                  <a href="https://www.linkedin.com/in/veronica-bortignon-8b9b4b203/" target="_blank" rel="noreferrer noopener">
+                    <img src="images/linkedinIcon.svg" id="icon">
+                  </a>
+                  <a href="https://github.com/VeronicaBorti" target="_blank" rel="noreferrer noopener">
+                    <img src="images/githubIcon.png" id="icon">
+                  </a>
+                  <a href="https://talent.start2impact.it/profile/veronica-bortignon-437f0021-c809-48c7-bb64-04baa03563ab" target="_blank" rel="noreferrer noopener">
+                     <img src="images/iconStart2impact.svg" id="icon">
+                  </a>
+                 </div>
+                 <div class="copyright"
+                    <p> © VERONICA BORTIGNON 2024</p>
+                 </div>
+              </footer>
+  </body>
+</html>

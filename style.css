@@ -1,0 +1,105 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  color: black;
+}
+img{
+  width: 100%;
+}
+.lead{
+  margin-top: 250px;
+  color: white;
+  font-size: 25px;
+}
+h1{
+  margin-top: 200px;
+  color: white;
+}
+.lead1{
+  color: black;
+  display: flex;
+  justify-content: center;
+}
+strong{
+  display: block;
+  font-size: 50px;
+}
+.nav {
+position: fixed;
+top: 0;
+z-index: 999;
+width: 100%;
+}
+.nav-item{
+  padding: 8px 20px;
+}
+#icon{
+  width: 22px;
+}
+#icon2{
+  width: 22px;
+}
+footer{
+  margin: 0 0 40px 0;
+}
+.social{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 16px;
+  margin-top: 24px;
+}
+.copyright{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.profileImg{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 110px;
+  width: 200px;
+  border-radius: 5px;
+}
+.aboutMe{
+  display: flex;
+  justify-content: center;
+  color: black;
+}
+.grid-container{
+  display:grid;
+  width: auto;
+  grid-template-columns: 1 fr 2 fr 1 fr 2 fr;
+  grid-gap: 2px;
+  grid-template-areas: "item1 item2 item3 item4";
+}
+.grid-item{
+  color: #FFFFFF;
+  padding: 10px;
+  margin: 2px;
+}
+.item-1{
+  grid-area: item1;
+  
+}
+.item-2{
+  grid-area: item2;
+  width: auto;
+}
+.item-3{
+  grid-area: item3;
+  
+}
+.item-4{
+  grid-area: item4;
+  
+}

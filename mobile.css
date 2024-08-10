@@ -1,0 +1,75 @@
+@media screen and (max-width:768px) {
+    .nav {
+        position: fixed;
+        top: 0;
+        z-index: 999;
+        width: 100%;
+ }
+ .img{
+ display: block;
+ }
+ .lead{
+    color: whitesmoke;
+    display: inline;
+  }
+  em{
+    display: block;
+    font-size: 12px;
+    margin-top: 50px;
+  }
+  strong{
+    display: block;
+    font-size: 30px;
+  }
+  .lead1{
+    margin: 0 50px 0 50px;
+  }
+  .grid-container{
+    display:grid;
+    width: 100%;
+    grid-template-columns: 1 fr 2 fr 1 fr 2 fr;
+    grid-gap: 2px;
+    grid-template-areas:
+    "item1"
+    "item2" 
+    "item3"
+    "item4";
+  }
+  .profileImg{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 60px;
+    padding-right: 30px;
+    width: 200px;
+    border-radius: 5px;
+  }
+  .item-1{
+    display: flex;
+    justify-content: center;
+    grid-area: item1;
+    
+  }
+  .item-2{
+    display: flex;
+    justify-content: center;
+    grid-area: item2;
+  
+  }
+  .item-3{
+    display: block;
+    justify-content:center;
+    grid-area: item3;
+    
+  }
+  .item-4{
+    display: flex;
+    justify-content: center;
+    grid-area: item4;
+    
+  }
+ .projectsContainer{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+ }
